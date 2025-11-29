@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes_informaticos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen relative overflow-hidden">
+    <!-- Efectos de fondo animados -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div class="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <!-- Header mejorado -->
+            <div class="text-center mb-12 animate-fade-in">
+                <div class="inline-block">
+                    <h1 class="text-6xl md:text-7xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent mb-3 tracking-tight drop-shadow-2xl">
+                        Componentes_informaticos
+                    </h1>
+                    <div class="h-1 w-full bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 rounded-full"></div>
+                </div>
+                <p class="text-gray-300 text-xl mt-4 font-light tracking-wide">Tu tienda de confianza en equipos informáticos</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Login Card mejorado -->
+                <div id="loginCard" class="bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl p-8 transform transition-all duration-500 border border-white/20 hover:shadow-purple-500/50 hover:scale-105">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform hover:rotate-6 transition-transform duration-300">
+                            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-4xl font-bold text-white mb-2">Iniciar Sesión</h2>
+                        <p class="text-gray-300 mt-2 text-lg">Bienvenido de nuevo</p>
+                    </div>
+
+                    <form id="loginForm">
+                        <div class="space-y-5">
+                            <div class="form-group">
+                                <label for="loginCorreo" class="block text-sm font-semibold text-gray-200 mb-2">Correo Electrónico</label>
+                                <input type="email" id="loginCorreo" required 
+                                    class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all text-white placeholder-gray-400 backdrop-blur-sm">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="loginPassword" class="block text-sm font-semibold text-gray-200 mb-2">Contraseña</label>
+                                <input type="password" id="loginPassword" required 
+                                    class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all text-white placeholder-gray-400 backdrop-blur-sm">
+                            </div>
+
+                            <div id="loginError" class="hidden bg-red-500/20 border border-red-500/50 text-red-200 px-4 py-3 rounded-xl text-sm backdrop-blur-sm"></div>
+
+                            <button type="submit" id="loginBtn"
+                                class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-4 rounded-xl font-bold hover:from-purple-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50">
+                                Ingresar
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="mt-8 text-center">
+                        <p class="text-gray-300">¿No tienes cuenta? 
+                            <span id="showRegister" class="text-purple-400 font-bold cursor-pointer hover:text-purple-300 transition-colors">Regístrate aquí</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Register Card mejorado -->
+                <div id="registerCard" class="bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl p-8 transform transition-all duration-500 hidden border border-white/20 hover:shadow-pink-500/50 hover:scale-105">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg transform hover:rotate-6 transition-transform duration-300">
+                            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-4xl font-bold text-white mb-2">Registro</h2>
+                        <p class="text-gray-300 mt-2 text-lg">Crea tu cuenta nueva</p>
+                    </div>
+
+                    <form id="registerForm">
+                        <div class="space-y-4 max-h-96 overflow-y-auto pr-2 custom-scrollbar">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="form-group">
+                                    <label for="regNombre" class="block text-sm font-semibold text-gray-200 mb-2">Nombre</label>
+                                    <input type="text" id="regNombre" required 
+                                        class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-all text-white placeholder-gray-400 backdrop-blur-sm">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="regApellidos" class="block text-sm font-semibold text-gray-200 mb-2">Apellidos</label>
+                                    <input type="text" id="regApellidos" required 
+                                        class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-all text-white placeholder-gray-400 backdrop-blur-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="form-group">
+                                    <label for="regDni" class="block text-sm font-semibold text-gray-200 mb-2">DNI (8 dígitos)</label>
+                                    <input type="text" id="regDni" required maxlength="8" pattern="\d{8}"
+                                        class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-all text-white placeholder-gray-400 backdrop-blur-sm">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="regTelefono" class="block text-sm font-semibold text-gray-200 mb-2">Teléfono (9 dígitos)</label>
+                                    <input type="tel" id="regTelefono" required maxlength="9" pattern="\d{9}"
+                                        class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-all text-white placeholder-gray-400 backdrop-blur-sm">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="regCorreo" class="block text-sm font-semibold text-gray-200 mb-2">Correo Electrónico</label>
+                                <input type="email" id="regCorreo" required 
+                                    class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-all text-white placeholder-gray-400 backdrop-blur-sm">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="regPassword" class="block text-sm font-semibold text-gray-200 mb-2">Contraseña</label>
+                                <input type="password" id="regPassword" required minlength="6"
+                                    class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-all text-white placeholder-gray-400 backdrop-blur-sm">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="regDireccion" class="block text-sm font-semibold text-gray-200 mb-2">Dirección</label>
+                                <textarea id="regDireccion" required rows="2"
+                                    class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-all text-white placeholder-gray-400 backdrop-blur-sm resize-none"></textarea>
+                            </div>
+
+                            <div id="registerError" class="hidden bg-red-500/20 border border-red-500/50 text-red-200 px-4 py-3 rounded-xl text-sm backdrop-blur-sm"></div>
+
+                            <button type="submit" id="registerBtn"
+                                class="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white py-4 rounded-xl font-bold hover:from-pink-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-pink-500/50">
+                                Crear Cuenta
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-300">¿Ya tienes cuenta? 
+                            <span id="showLogin" class="text-pink-400 font-bold cursor-pointer hover:text-pink-300 transition-colors">Inicia sesión</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de carga mejorado -->
+    <div id="loadingModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-50">
+        <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-10 text-center border border-white/20 shadow-2xl">
+            <div class="relative">
+                <div class="animate-spin rounded-full h-20 w-20 border-4 border-purple-200/30 border-t-purple-500 mx-auto"></div>
+                <div class="absolute inset-0 animate-ping rounded-full h-20 w-20 border-4 border-purple-400/20 mx-auto"></div>
+            </div>
+            <p class="mt-6 text-white font-bold text-lg">Procesando...</p>
+        </div>
+    </div>
+
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(219, 39, 119, 0.5);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(219, 39, 119, 0.7);
+        }
+    </style>
+
+    <script src="/static/js/index.js"></script>
+</body>
+</html>
